@@ -4,9 +4,9 @@ github.com/an-repository/errors v0.0.0-20230103201641-caff5431f460 h1:qJ24VN8zF1
 github.com/an-repository/errors v0.0.0-20230103201641-caff5431f460/go.mod h1:/nJk3erUEF+V8VpYh11mZxnRMvHaQCyuuyAu9IaGOgg=
 github.com/an-repository/kvfmt v0.0.0-20230103201625-e47449c0d172 h1:mATcp8PPyMg0Q/971XjCj5BwGsnMfDEmp92ZoxydAAs=
 github.com/an-repository/kvfmt v0.0.0-20230103201625-e47449c0d172/go.mod h1:lz/x8hGYYJhIcM2RhNjc9k4jtVrnGwjcwNCXkQyVfYk=
-github.com/an-repository/logger v0.0.0-20230103201726-0ea67cfe1356 h1:7U7O1IDmqcXnkEaD+QhYqBU6jsPyu21/2Js2tO0Uims=
-github.com/an-repository/logger v0.0.0-20230103201726-0ea67cfe1356/go.mod h1:p4YurYDnOUsfZAglASDF/LSF+BVIWFo2G5d2plp2fq0=
 github.com/an-repository/tracer v0.0.0-20221228233055-4bda216345bd h1:kxosDfWC6bBSsEd5TX+W9lgRj3xAQL+V5t9coeXrBI8=
 github.com/an-repository/tracer v0.0.0-20221228233055-4bda216345bd/go.mod h1:U5aIVsGICAJa/fNG84CaXOdrErTS3d45WpWlayhafug=
+github.com/an-repository/zombie v0.0.0-20230105140233-7cac54000c61 h1:RfOkKcol0dmGKwHsHVZzhdpOaDohvS3EUeXn9ZNrOwM=
+github.com/an-repository/zombie v0.0.0-20230105140233-7cac54000c61/go.mod h1:mMPO8rgX5MqOlCDE3d55NbiXVolK6d8X1Pzp3MnAUyM=
 github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
 github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=

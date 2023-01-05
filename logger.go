@@ -9,15 +9,23 @@
 package scheduler
 
 import (
-	"github.com/an-repository/logger"
+	"github.com/an-repository/zombie"
 	"github.com/robfig/cron/v3"
 )
 
-type cronLogger struct {
-	logger *logger.Logger
-}
+type (
+	Logger interface {
+		zombie.Logger
+		Trace(msg string, kv ...any)
+		Error(err error, msg string, kv ...any)
+	}
 
-func newCronLogger(logger *logger.Logger) cron.Logger {
+	cronLogger struct {
+		logger Logger
+	}
+)
+
+func newCronLogger(logger Logger) cron.Logger {
 	return &cronLogger{logger}
 }
 

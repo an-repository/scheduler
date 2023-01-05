@@ -9,12 +9,13 @@
 package scheduler
 
 import (
+	"context"
 	"fmt"
 	"sync"
 	"time"
 
 	"github.com/an-repository/errors"
-	"github.com/an-repository/logger"
+	"github.com/an-repository/zombie"
 	"github.com/robfig/cron/v3"
 )
 
@@ -22,9 +23,10 @@ type (
 	Scheduler struct {
 		cron   *cron.Cron
 		parser cron.Parser
-		logger *logger.Logger
+		logger Logger
 		events map[string]*event
 		mutex  sync.RWMutex
+		zombie *zombie.Zombie
 	}
 
 	Option func(*Scheduler)
@@ -40,7 +42,7 @@ type (
 	}
 )
 
-func WithLogger(logger *logger.Logger) Option {
+func WithLogger(logger Logger) Option {
 	return func(s *Scheduler) {
 		s.logger = logger
 	}
@@ -216,6 +218,37 @@ func (s *Scheduler) FireEvent(name string) error {
 	}
 
 	e.callback(e.name, e.data)
+
+	return nil
+}
+
+func (s *Scheduler) Start() error {
+	if s.zombie != nil {
+		return errors.New("scheduler already started") /////////////////////////////////////////////////////////////////
+	}
+
+	s.zombie = zombie.Go(
+		context.Background(),
+		func(_ context.Context, _ *zombie.Zombie) error {
+			s.cron.Run()
+			return nil
+		},
+		zombie.WithName("scheduler"),
+		zombie.WithLogger(s.logger),
+	)
+
+	return nil
+}
+
+func (s *Scheduler) Stop() error {
+	if s.zombie == nil {
+		return errors.New("scheduler not started") /////////////////////////////////////////////////////////////////////
+	}
+
+	<-s.cron.Stop().Done()
+	s.zombie.Wait()
+
+	s.zombie = nil
 
 	return nil
 }
