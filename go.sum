@@ -1,0 +1,12 @@
+github.com/an-repository/buffer v0.0.0-20221231182621-63f51ae2a6e8 h1:SMvEaRtgNgQdCXnuwHjmtNrHTt4zYalAvPVCxYCaDDs=
+github.com/an-repository/buffer v0.0.0-20221231182621-63f51ae2a6e8/go.mod h1:GDVrHC7fxqArErpvysL3dbq0ndSYaLvnvWW/YVg940U=
+github.com/an-repository/errors v0.0.0-20230103201641-caff5431f460 h1:qJ24VN8zF1w1L2esWw27j+4Ho7s6eWruL9irOwZDygY=
+github.com/an-repository/errors v0.0.0-20230103201641-caff5431f460/go.mod h1:/nJk3erUEF+V8VpYh11mZxnRMvHaQCyuuyAu9IaGOgg=
+github.com/an-repository/kvfmt v0.0.0-20230103201625-e47449c0d172 h1:mATcp8PPyMg0Q/971XjCj5BwGsnMfDEmp92ZoxydAAs=
+github.com/an-repository/kvfmt v0.0.0-20230103201625-e47449c0d172/go.mod h1:lz/x8hGYYJhIcM2RhNjc9k4jtVrnGwjcwNCXkQyVfYk=
+github.com/an-repository/logger v0.0.0-20230103201726-0ea67cfe1356 h1:7U7O1IDmqcXnkEaD+QhYqBU6jsPyu21/2Js2tO0Uims=
+github.com/an-repository/logger v0.0.0-20230103201726-0ea67cfe1356/go.mod h1:p4YurYDnOUsfZAglASDF/LSF+BVIWFo2G5d2plp2fq0=
+github.com/an-repository/tracer v0.0.0-20221228233055-4bda216345bd h1:kxosDfWC6bBSsEd5TX+W9lgRj3xAQL+V5t9coeXrBI8=
+github.com/an-repository/tracer v0.0.0-20221228233055-4bda216345bd/go.mod h1:U5aIVsGICAJa/fNG84CaXOdrErTS3d45WpWlayhafug=
+github.com/robfig/cron/v3 v3.0.1 h1:WdRxkvbJztn8LMz/QEvLN5sBU+xKpSqwwUO1Pjr4qDs=
+github.com/robfig/cron/v3 v3.0.1/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=

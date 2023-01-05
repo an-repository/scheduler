@@ -1,0 +1,24 @@
+## https://taskfile.dev
+
+version: '3'
+
+tasks:
+    upgrade:
+        cmds:
+            - go get -d -u ./...
+            - go mod tidy
+    lint:
+        cmds:
+            - golangci-lint run
+    test:
+        cmds:
+            - go test -cover -v ./...
+    default:
+        cmds:
+            - task: lint
+            - task: test
+    git:
+        cmds:
+            - git add .
+            - git commit -m "En cours de développement"
+            - git push
