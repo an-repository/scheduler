@@ -103,16 +103,6 @@ func (s *Scheduler) createEvent(e *Event, cb Callback) (*event, error) {
 	return event, nil
 }
 
-func (s *Scheduler) AddEventList(eList []*Event, cb Callback) error {
-	for _, e := range eList {
-		if err := s.AddEvent(e, cb); err != nil {
-			return err
-		}
-	}
-
-	return nil
-}
-
 func (s *Scheduler) AddEvent(e *Event, cb Callback) error {
 	s.mutex.Lock()
 	defer s.mutex.Unlock()
