@@ -31,7 +31,7 @@ type (
 
 	Option func(*Scheduler)
 
-	Callback func(name string, data string)
+	Callback func(name, data string)
 
 	Event struct {
 		Name     string        `dm:"name"`
